@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="240" translatesAutoresizingMaskIntoConstraints="NO" id="rS3-2F-lZx">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="240" image="defaultAlbumCover" translatesAutoresizingMaskIntoConstraints="NO" id="rS3-2F-lZx">
                                 <rect key="frame" x="150" y="85" width="300" height="300"/>
                                 <animations/>
                                 <constraints>
@@ -53,6 +53,9 @@ Shake to play random track.</string>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Sound Shaker" id="hUL-nz-FWj"/>
+                    <connections>
+                        <outlet property="albumArtImageView" destination="rS3-2F-lZx" id="dDp-dp-9jL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -78,4 +81,7 @@ Shake to play random track.</string>
             <point key="canvasLocation" x="589" y="536"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="defaultAlbumCover" width="160" height="160"/>
+    </resources>
 </document>
