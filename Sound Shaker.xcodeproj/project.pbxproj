@@ -12,14 +12,7 @@
 		65A3EF5B1B68D3EF00347311 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65A3EF591B68D3EF00347311 /* Main.storyboard */; };
 		65A3EF5D1B68D3EF00347311 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65A3EF5C1B68D3EF00347311 /* Assets.xcassets */; };
 		65A3EF601B68D3EF00347311 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65A3EF5E1B68D3EF00347311 /* LaunchScreen.storyboard */; };
-		65A3EF681B68DCF900347311 /* 2NE1 - Let's Go Party.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 65A3EF671B68DCF900347311 /* 2NE1 - Let's Go Party.mp3 */; };
-		65A3EF6D1B68DDAD00347311 /* 2NE1 - Let's Go Party.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 65A3EF6C1B68DDAD00347311 /* 2NE1 - Let's Go Party.jpg */; };
-		65A3EF6F1B68DE3A00347311 /* Asian Kung-Fu Generation - Shindou Satoshi.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 65A3EF6E1B68DE3A00347311 /* Asian Kung-Fu Generation - Shindou Satoshi.jpg */; };
-		65A3EF711B68DE7100347311 /* Asian Kung-Fu Generation - Shindou Satoshi.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 65A3EF701B68DE7100347311 /* Asian Kung-Fu Generation - Shindou Satoshi.mp3 */; };
-		65A3EF731B68DEFF00347311 /* Home Made Kazoku - Shounen Heart.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 65A3EF721B68DEFF00347311 /* Home Made Kazoku - Shounen Heart.mp3 */; };
-		65A3EF751B68DF0D00347311 /* Home Made Kazoku - Shounen Heart.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 65A3EF741B68DF0D00347311 /* Home Made Kazoku - Shounen Heart.jpg */; };
-		65A3EF771B68DF5A00347311 /* B'z - Banzai.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 65A3EF761B68DF5A00347311 /* B'z - Banzai.mp3 */; };
-		65A3EF791B68DF6C00347311 /* B'z - Banzai.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 65A3EF781B68DF6C00347311 /* B'z - Banzai.jpg */; };
+		65A603581B69E04A001768C2 /* Audio Assets in Resources */ = {isa = PBXBuildFile; fileRef = 65A603571B69E04A001768C2 /* Audio Assets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,14 +23,7 @@
 		65A3EF5C1B68D3EF00347311 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		65A3EF5F1B68D3EF00347311 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		65A3EF611B68D3EF00347311 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		65A3EF671B68DCF900347311 /* 2NE1 - Let's Go Party.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "2NE1 - Let's Go Party.mp3"; sourceTree = "<group>"; };
-		65A3EF6C1B68DDAD00347311 /* 2NE1 - Let's Go Party.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "2NE1 - Let's Go Party.jpg"; sourceTree = "<group>"; };
-		65A3EF6E1B68DE3A00347311 /* Asian Kung-Fu Generation - Shindou Satoshi.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Asian Kung-Fu Generation - Shindou Satoshi.jpg"; sourceTree = "<group>"; };
-		65A3EF701B68DE7100347311 /* Asian Kung-Fu Generation - Shindou Satoshi.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Asian Kung-Fu Generation - Shindou Satoshi.mp3"; sourceTree = "<group>"; };
-		65A3EF721B68DEFF00347311 /* Home Made Kazoku - Shounen Heart.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Home Made Kazoku - Shounen Heart.mp3"; sourceTree = "<group>"; };
-		65A3EF741B68DF0D00347311 /* Home Made Kazoku - Shounen Heart.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Home Made Kazoku - Shounen Heart.jpg"; sourceTree = "<group>"; };
-		65A3EF761B68DF5A00347311 /* B'z - Banzai.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "B'z - Banzai.mp3"; sourceTree = "<group>"; };
-		65A3EF781B68DF6C00347311 /* B'z - Banzai.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "B'z - Banzai.jpg"; sourceTree = "<group>"; };
+		65A603571B69E04A001768C2 /* Audio Assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Audio Assets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,30 +56,15 @@
 		65A3EF541B68D3EF00347311 /* Sound Shaker */ = {
 			isa = PBXGroup;
 			children = (
+				65A603571B69E04A001768C2 /* Audio Assets */,
 				65A3EF551B68D3EF00347311 /* AppDelegate.swift */,
 				65A3EF571B68D3EF00347311 /* ViewController.swift */,
 				65A3EF591B68D3EF00347311 /* Main.storyboard */,
 				65A3EF5C1B68D3EF00347311 /* Assets.xcassets */,
 				65A3EF5E1B68D3EF00347311 /* LaunchScreen.storyboard */,
 				65A3EF611B68D3EF00347311 /* Info.plist */,
-				65A3EF6B1B68DD8200347311 /* Audio Assets */,
 			);
 			path = "Sound Shaker";
-			sourceTree = "<group>";
-		};
-		65A3EF6B1B68DD8200347311 /* Audio Assets */ = {
-			isa = PBXGroup;
-			children = (
-				65A3EF6C1B68DDAD00347311 /* 2NE1 - Let's Go Party.jpg */,
-				65A3EF671B68DCF900347311 /* 2NE1 - Let's Go Party.mp3 */,
-				65A3EF6E1B68DE3A00347311 /* Asian Kung-Fu Generation - Shindou Satoshi.jpg */,
-				65A3EF701B68DE7100347311 /* Asian Kung-Fu Generation - Shindou Satoshi.mp3 */,
-				65A3EF721B68DEFF00347311 /* Home Made Kazoku - Shounen Heart.mp3 */,
-				65A3EF741B68DF0D00347311 /* Home Made Kazoku - Shounen Heart.jpg */,
-				65A3EF761B68DF5A00347311 /* B'z - Banzai.mp3 */,
-				65A3EF781B68DF6C00347311 /* B'z - Banzai.jpg */,
-			);
-			name = "Audio Assets";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,16 +124,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				65A3EF681B68DCF900347311 /* 2NE1 - Let's Go Party.mp3 in Resources */,
-				65A3EF731B68DEFF00347311 /* Home Made Kazoku - Shounen Heart.mp3 in Resources */,
-				65A3EF711B68DE7100347311 /* Asian Kung-Fu Generation - Shindou Satoshi.mp3 in Resources */,
 				65A3EF601B68D3EF00347311 /* LaunchScreen.storyboard in Resources */,
-				65A3EF6D1B68DDAD00347311 /* 2NE1 - Let's Go Party.jpg in Resources */,
-				65A3EF751B68DF0D00347311 /* Home Made Kazoku - Shounen Heart.jpg in Resources */,
-				65A3EF791B68DF6C00347311 /* B'z - Banzai.jpg in Resources */,
-				65A3EF771B68DF5A00347311 /* B'z - Banzai.mp3 in Resources */,
+				65A603581B69E04A001768C2 /* Audio Assets in Resources */,
 				65A3EF5D1B68D3EF00347311 /* Assets.xcassets in Resources */,
-				65A3EF6F1B68DE3A00347311 /* Asian Kung-Fu Generation - Shindou Satoshi.jpg in Resources */,
 				65A3EF5B1B68D3EF00347311 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -323,6 +287,7 @@
 				65A3EF661B68D3EF00347311 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

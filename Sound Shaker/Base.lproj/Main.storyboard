@@ -25,16 +25,15 @@
                                 </constraints>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MYT-yY-Lcl">
-                                <rect key="frame" x="150" y="402" width="300" height="136"/>
+                                <rect key="frame" x="144" y="402" width="312" height="120"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="136" id="4yY-RM-BQK"/>
-                                    <constraint firstAttribute="width" constant="300" id="z54-Oc-oYa"/>
+                                    <constraint firstAttribute="height" constant="120" id="Na9-Cg-x9S"/>
+                                    <constraint firstAttribute="width" constant="312" id="tBU-gH-keA"/>
                                 </constraints>
-                                <string key="text">Tap album to play. 
+                                <string key="text">Tap album's art to play. Tap again to pause.
 Tap and hold album to stop.
-Swipe down to pause
 Swipe left to play the previous track.
 Swipe right to play the next track.
 Shake to play random track.</string>
@@ -45,21 +44,21 @@ Shake to play random track.</string>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="MYT-yY-Lcl" firstAttribute="top" secondItem="rS3-2F-lZx" secondAttribute="bottom" constant="17" id="3In-uL-XX8"/>
-                            <constraint firstItem="MYT-yY-Lcl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Hoa-D1-ISU"/>
+                            <constraint firstItem="MYT-yY-Lcl" firstAttribute="top" secondItem="rS3-2F-lZx" secondAttribute="bottom" constant="17" id="JPb-qP-bmr"/>
+                            <constraint firstItem="MYT-yY-Lcl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MTG-0V-bPK"/>
                             <constraint firstItem="rS3-2F-lZx" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="21" id="MlU-Ho-Hpo"/>
                             <constraint firstItem="rS3-2F-lZx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fc3-ed-jqt"/>
-                            <constraint firstItem="MYT-yY-Lcl" firstAttribute="top" secondItem="rS3-2F-lZx" secondAttribute="bottom" constant="17" id="pjU-kf-nLH"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Sound Shaker" id="hUL-nz-FWj"/>
                     <connections>
                         <outlet property="albumArtImageView" destination="rS3-2F-lZx" id="dDp-dp-9jL"/>
+                        <outlet property="instructionsTextView" destination="MYT-yY-Lcl" id="5v0-lf-rjj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1401" y="536"/>
+            <point key="canvasLocation" x="1327" y="536"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="kbv-Ws-Sap">
