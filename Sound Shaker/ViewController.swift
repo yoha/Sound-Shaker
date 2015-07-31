@@ -43,6 +43,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var instructionsTextView: UITextView! {
         didSet {
             self.instructionsTextView.editable = false
+            self.instructionsTextView.selectable = false
         }
     }
     // MARK: - Local methods
