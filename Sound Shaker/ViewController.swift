@@ -14,11 +14,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.randomSongIndex = Int(arc4random_uniform(UInt32(self.songFilesPath.count)))
-        self.initiateSoundPlayer()
+        self.initiateSoundPlayer(self.randomSongIndex)
         self.initiateTapGestureToPlayOrPauseSong()
         self.initiateSwipeRelatedGesturesToControlSongPlayback()
         self.initiateTapAndHoldGestureToStopSong()
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,7 +30,7 @@ class ViewController: UIViewController {
     var songPlayer: AVAudioPlayer!
     let songFilesPath: [String]! = NSBundle.mainBundle().pathsForResourcesOfType(".mp3", inDirectory: "Audio Assets")
     let albumArtFilesPath: [String]! = NSBundle.mainBundle().pathsForResourcesOfType(".jpg", inDirectory: "Audio Assets")
-    var randomSongIndex = 0
+    var randomSongIndex = Int() // equivalent to "= 0"
     var isPlaying = "nope"
     
     // MARK: - IBOutlet properties
@@ -48,9 +47,9 @@ class ViewController: UIViewController {
     }
     // MARK: - Local methods
     
-    func initiateSoundPlayer() {
+    func initiateSoundPlayer(songIndex: Int) {
         do {
-            songPlayer = try AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: self.songFilesPath[self.randomSongIndex]))
+            songPlayer = try AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: self.songFilesPath[songIndex]))
             songPlayer.prepareToPlay()
         }
         catch {
@@ -60,20 +59,20 @@ class ViewController: UIViewController {
     
     
     func initiateSwipeRelatedGesturesToControlSongPlayback() {
-        /*
-        let directions: [UISwipeGestureRecognizerDirection] = [.Down, .Left, .Right]
-        let recognizers: [UISwipeGestureRecognizer] = directions.map { direction in
-        let gesture = UISwipeGestureRecognizer(target: self, action: "validateSwipeGesture")
-        gesture.direction = direction
-        self.someView.addGestureRecognizer(gesture)
-        }
-        */
         let swipeDirections: [UISwipeGestureRecognizerDirection] = [.Left, .Right]
         for swipeDirection in swipeDirections {
             let gesture = UISwipeGestureRecognizer(target: self, action: "validateGestureType:")
             gesture.direction = swipeDirection
             self.view.subviews[0].addGestureRecognizer(gesture)
         }
+        /***Alternatively (using map function)
+        let directions: [UISwipeGestureRecognizerDirection] = [.Down, .Left, .Right]
+        let recognizers: [UISwipeGestureRecognizer] = directions.map { direction in
+        let gesture = UISwipeGestureRecognizer(target: self, action: "validateSwipeGesture")
+        gesture.direction = direction
+        self.someView.addGestureRecognizer(gesture)
+        }
+        ***/
     }
     
     func initiateTapGestureToPlayOrPauseSong() {
@@ -85,6 +84,18 @@ class ViewController: UIViewController {
         let longPressGesture = UILongPressGestureRecognizer(target: self, action: "validateGestureType:")
         longPressGesture.minimumPressDuration = 1.0
         self.view.subviews[0].addGestureRecognizer(longPressGesture)
+    }
+    
+    func nextSong() {
+        if ++self.randomSongIndex < self.songFilesPath.count {
+            self.initiateSoundPlayer(self.randomSongIndex)
+            self.playOrPauseSong()
+        }
+        else {
+            self.randomSongIndex = 0
+            self.initiateSoundPlayer(self.randomSongIndex)
+            self.playOrPauseSong()
+        }
     }
     
     func playOrPauseSong() {
@@ -99,19 +110,32 @@ class ViewController: UIViewController {
         }
     }
     
+    func previousSong() {
+        if --self.randomSongIndex > -1 {
+            self.initiateSoundPlayer(self.randomSongIndex)
+            self.playOrPauseSong()
+        }
+        else {
+            self.randomSongIndex = self.songFilesPath.count - 1
+            self.initiateSoundPlayer(self.randomSongIndex)
+            self.playOrPauseSong()
+        }
+    }
+    
     func stopSong() {
         self.albumArtImageView.image = UIImage(named: "defaultAlbumCover")
         self.songPlayer.stop()
         self.songPlayer.currentTime = 0
+        self.isPlaying = "nope"
     }
     
     func validateGestureType(gestureType: UIGestureRecognizer) {
         if let isGestureSwipe = gestureType as? UISwipeGestureRecognizer {
             switch isGestureSwipe.direction {
             case UISwipeGestureRecognizerDirection.Left:
-                print("")
+                self.stopSong(); self.previousSong()
             case UISwipeGestureRecognizerDirection.Right:
-                print("right")
+                self.stopSong(); self.nextSong()
             default:
                 break
             }
@@ -129,6 +153,10 @@ class ViewController: UIViewController {
     
     override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent?) {
         if event?.subtype == UIEventSubtype.MotionShake {
+            self.stopSong()
+            self.randomSongIndex = Int(arc4random_uniform(UInt32(self.songFilesPath.count)))
+            self.initiateSoundPlayer(self.randomSongIndex)
+            self.playOrPauseSong()
         }
     }
     
